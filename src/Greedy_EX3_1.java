@@ -1,5 +1,5 @@
-public class Greed_EX3_1 {
-    public static void main(String[] args){
+public class Greedy_EX3_1 {
+    public static void main(String [] args){
         int n = 1260;
         int[] coin_type = {500, 100, 50, 10};
 
@@ -15,3 +15,4 @@ public class Greed_EX3_1 {
         System.out.println(total_cnt);
     }
 }
+
