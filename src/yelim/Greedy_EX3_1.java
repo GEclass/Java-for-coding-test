@@ -1,3 +1,5 @@
+package yelim;
+
 public class Greedy_EX3_1 {
     public static void main(String [] args){
         int n = 1260;
