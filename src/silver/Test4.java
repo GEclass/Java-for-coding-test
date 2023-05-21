@@ -1,4 +1,4 @@
-// 1. 자바에도 동일하게 while()문이 존재한다.
+package silver;// 1. 자바에도 동일하게 while()문이 존재한다.
 // while () { }
 
 import java.util.*;
