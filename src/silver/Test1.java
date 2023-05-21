@@ -1,4 +1,4 @@
-// 1. for문의 i는 무슨 역할을 하는가?
+package silver;// 1. for문의 i는 무슨 역할을 하는가?
 // 2. coin 변수를 따로 선언한 까닭은?
 // 3. 아래의 코드가 옳지 않은 이유는?
 // n = n - count * cointype[coin];
