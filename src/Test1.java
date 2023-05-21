@@ -11,12 +11,11 @@ public class Test1 {
         int n = 1260;
         int count = 0;
 
-        int [] cointype = {500, 100, 50, 10};
+        int [] cointypes = {500, 100, 50, 10};
 
         for(int i = 0; i < 4; i ++) {
-            int coin = cointype[i];
-            count = count + n / coin;
-            n = n % coin;
+            count = count + n / cointypes[i];
+            n = n % cointypes[i];
         }
         System.out.println(count);
     }
