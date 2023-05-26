@@ -1,5 +1,4 @@
-package silver;// 1. 자바에도 동일하게 while()문이 존재한다.
-// while () { }
+package silver.greedy;
 
 import java.util.*;
 
@@ -13,6 +12,8 @@ public class Test4 {
         int k = sc.nextInt();
         int result = 0;
 
+        // 자바에도 동일하게 while()문이 존재
+        // 또한 if가 아니라 while인 이유를 생각해보면 좋을 것
         while(n >= k) {
             while (n % k != 0) {
                 n = n - 1;
