@@ -10,7 +10,7 @@ public class Greedy_EX3_1 {
 
         for (int k : coin_type) {
             coin_cnt = n / k;
-            n -= (k * coin_cnt);지
+            n -= (k * coin_cnt);
             total_cnt += coin_cnt;
         }
 
