@@ -1,4 +1,4 @@
-package yelim;
+package yelim.greedy;
 
 public class Greedy_EX3_1 {
     public static void main(String [] args){
@@ -10,7 +10,7 @@ public class Greedy_EX3_1 {
 
         for (int k : coin_type) {
             coin_cnt = n / k;
-            n -= (k * coin_cnt);
+            n -= (k * coin_cnt);지
             total_cnt += coin_cnt;
         }
 
