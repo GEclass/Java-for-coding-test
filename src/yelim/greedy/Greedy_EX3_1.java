@@ -1,4 +1,4 @@
-package yelim;
+package yelim.greedy;
 
 public class Greedy_EX3_1 {
     public static void main(String [] args){
