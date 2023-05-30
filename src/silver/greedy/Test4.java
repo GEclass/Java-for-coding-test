@@ -5,7 +5,6 @@ import java.util.*;
 public class Test4 {
 
     public static void main(String [] args) {
-
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
@@ -19,13 +18,16 @@ public class Test4 {
                 n = n - 1;
                 result = result + 1;
             }
+
             n = n / k;
             result = result + 1;
         }
+
         while (n > 1) {
             n = n - 1;
             result = result + 1;
         }
+
         System.out.println(result);
     }
 }

@@ -11,7 +11,6 @@ public class Test1 {
         sc.nextLine();
         // 이전 문제들과 달리 공백으로 구분되지 않음
         String[] plans = sc.nextLine().split(" ");
-        System.out.println(plans);
         int x = 1, y = 1;
 
         // L: ←, R: →, U: ↑, D: ↓
@@ -34,13 +33,16 @@ public class Test1 {
                     ny = y + dy[j];
                 }
             }
+
             if (nx < 1 || ny < 1 || nx > n || ny > n) {
                 // 하나라도 참일 경우 첫 번째 for문으로 리턴
                 continue;
             }
+
             x = nx;
             y = ny;
         }
+
         // " " 사용 시, 띄어쓰기 효과
         System.out.println(x + " " + y);
     }

@@ -17,6 +17,7 @@ public class Test2 {
             // 입력한 값을 하나씩 배열에 저장
             arr[i] = sc.nextInt();
         }
+
         // 자바에서 배열을 오름차순으로 정렬하는 방법
         Arrays.sort(arr);
 
@@ -31,6 +32,7 @@ public class Test2 {
 
         int result = 0;
         result = (count * first) + (m - count) * second;
+
         System.out.println(result);
     }
 }

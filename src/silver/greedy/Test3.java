@@ -21,8 +21,10 @@ public class Test3 {
                 // 자바에서 가장 작은 값을 찾는 함수
                 min_value = Math.min(min_value, x);
             }
+
             result = Math.max(result, min_value);
         }
+
         System.out.println(result);
     }
 }

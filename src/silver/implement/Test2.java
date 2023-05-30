@@ -16,6 +16,7 @@ public class Test2 {
             return false;
         }
     }
+
     public static void main(String [] args) {
         Scanner sc = new Scanner(System.in);
 
