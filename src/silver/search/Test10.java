@@ -7,7 +7,7 @@ public class Test10 {
     // static 메소드인 main과 dfs에서 접근할 수 있게 하기 위해 static 변수로 선언
     public static int n, m;
     // 조건에 의하면 n, m 은 1000보다 작거나 같음
-    public static int[][] graph = new int[3][3];
+    public static int[][] graph = new int[1000][1000];
 
     // true/false로 result를 증가시키기 위해 boolean 값을 리턴
     public static boolean dfs(int x, int y) {
