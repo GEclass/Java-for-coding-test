@@ -25,6 +25,8 @@ public class Implement_EX4_4 {
         int nx = 0;
         int ny = 0;
 
+        map[x][y] = 1; // 현재 시작 좌표 방문 처리
+
         // 방문 칸 수
         int count = 1;
 
