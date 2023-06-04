@@ -46,13 +46,15 @@ public class Test10 {
             String str = sc.nextLine();
             for (int j = 0; j < m; j++) {
                 // 그래프의 특정 위치에 문자를 정수형 타입으로 변환하여 값을 저장하는 방법
+                // str.charAt(j) : j번째 문자 한 개를 가져옴
                 // graph[i][j] = str.charAt(j) - '0';
                 graph[i][j] = Integer.parseInt(str.split(" ")[j]);
 
             }
         }
 
-        System.out.println(Arrays.deepToString(graph));
+        // System.out.println(Arrays.deepToString(graph));
+
         // 음료수 채우기
         int result = 0;
         for (int i = 0; i < n; i++) {
