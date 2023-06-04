@@ -47,7 +47,7 @@ public class DFS_BFS_EX5_11 {
             // 방문한 노드의 x, y 좌표 가져오기
             x = node.getX();
             y = node.getY();
-            // System.out.println("(" + x + "," + y + ") : " + graph[x][y]);
+            // System.out.println("(" + x + ", " + y + ") : " + graph[x][y]);
 
             // 현재 위치에서 4가지 방향으로의 위치 확인
             for (int i = 0; i < 4; i++) {
@@ -64,7 +64,6 @@ public class DFS_BFS_EX5_11 {
                 // 해당 노드를 처음 방문하는 경우에만 최단 거리 기록
                 // 새롭게 방문하면 +1
                 if (graph[nx][ny] == 1) {
-                    System.out.println(graph[nx][ny]);
                     // 움직인 거리 계산
                     graph[nx][ny] = graph[x][y] + 1;
                     q.offer(new Node_Maze(nx, ny));
