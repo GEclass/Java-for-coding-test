@@ -11,17 +11,18 @@ public class Sort_EX6_3 {
         int right = end;
 
         while (left <= right) {
-            // 피벗보다 작은 데이터를 찾을 때까지 반복
-            // 마지막 인덱스 번호보다 작으면서 기준 원소보다 작은 원소 찾기
-            // 찾으면 옆으로 가기
+            // 피벗보다 큰 데이터를 찾을 때까지 반복
+            // 마지막 인덱스 번호보다 작으면서 피벗보다 큰 원소 찾기
+            // 피벗보다 큰 원소라면 while문을 빠져나와 if문(엇갈렸는지 교체할 건지)에 들어간다.
             while (left <= end && arr[left] <= arr[pivot]) left++;
 
-            // 피벗보다 큰 데이터를 찾을 때까지 반복
-            // 처음 인덱스 번호보다 크면서 기분 원소보다 큰 원소 찾기
+            // 피벗보다 작은 데이터를 찾을 때까지 반복
+            // 처음 인덱스 번호보다 크면서 피벗보다 작은 원소 찾기
+            // 피벗보다 작은 원소라면 while문을 빠져나와 if문(엇갈렸는지 교체할 건지)에 들어간다.
             while (right > start && arr[right] >= arr[pivot]) right--;
 
             // 엇갈렸다면 작은 데이터와 피벗을 교체
-            // 엇갈렸다는 개념을 아직 모르겠음
+            // 왼쪽에서 찾은 값과 오른쪽에서 찾은 값의 위치가 서로 엇갈렸다는 의미
             if (left > right) {
                 int temp = arr[pivot];
                 arr[pivot] = arr[right];
@@ -35,6 +36,7 @@ public class Sort_EX6_3 {
                 arr[right] = temp;
             }
         }
+
         // 분할 이후 왼쪽 부분과 오른쪽 부분에서 각각 정렬 수행
         quickSort(arr, start, right - 1);
         quickSort(arr, right + 1, end);
