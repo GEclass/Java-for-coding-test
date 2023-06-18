@@ -29,6 +29,7 @@ public class Test3 {
                 right --;
 
             // 엇갈렸다면 작은 데이터와 피벗을 교체
+            // 피벗보다 큰 값을 왼쪽에서부터 찾았으나 오른쪽에 있는 경우 = 피벗보다 작은 값을 오른쪽에서부터 찾았으나 왼쪽에 있는 경우
             // 피벗을 기준으로 피벗보다 작은 원소들이 왼쪽에, 큰 원소들이 오른쪽에 위치
             if (left > right) {
                 int temp = arr[pivot];
@@ -45,7 +46,11 @@ public class Test3 {
         }
 
         // 분할 이후 왼쪽 파트와 오른쪽 파트에서 각각 정렬 수행
+        // if (start >= end)에 걸릴 때까지 재귀 함수 반복 수행
+        // 왼쪽 파트 : (왼쪽 기준) 인덱스 0부터 피벗 값(5) 전(right - 1)까지
         quickSort(arr, start, right -1);
+        // 이후, if (start >= end)에 걸릴 때까지 재귀 함수 반복 수행
+        // 오른쪽 파트 : (오른쪽 기준) 피벗 값(5) 다음(right + 1)부터 인덱스 9까지
         quickSort(arr, right + 1, end);
     }
 
