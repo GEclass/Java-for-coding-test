@@ -3,9 +3,14 @@ package silver.dynamic;
 import java.util.Scanner;
 
 // ※ DP는 이해가 안 될때, 전체 함수가 호출되는 과정을 그림으로 그려보자.
+
+// 점화식: min(a i-1, a i/2, a i/3, a i/5) + 1
 public class Test4 {
     // 앞서 계산된 결과를 저장하기 위한 DP 테이블 초기화
-    public static int[] d = new int[10];
+
+    // 즉, 각 d[i]는 f(i = 5), f(i = 4), .. 와 매칭
+    // ex. i = 5, f(5)일 경우 연산을 하는 최솟값은 1.
+    public static int[] d = new int[30000];
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -23,6 +28,7 @@ public class Test4 {
             d[i] = d[i - 1] + 1;
             // (2) 현재 값 % 2 == 0
             if (i % 2 == 0)
+                // 연산을 하는 횟수의 최솟값을 구하기 위해 min() 사용
                 d[i] = Math.min(d[i], d[i / 2] + 1);
             // (3) 현재 값 % 3 == 0
             if (i % 3 == 0)
