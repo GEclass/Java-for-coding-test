@@ -2,7 +2,7 @@ package yelim.dynamic;
 
 
 import java.util.*;
-
+// 아직 이해하기 전 1로 만들기
 public class DP_EX8_4 {
     // 한 번 계산된 결과를 저장하는 메모이제이션 배열
     // 입력된 정수 x의 범위는 1부터 30000까지이다.
