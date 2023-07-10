@@ -2,12 +2,12 @@ package yelim.path;
 
 import java.util.*;
 
-class Node {
+class Node_queue {
 
     private int index;
     private int distance;
 
-    public Node(int index, int distance) {
+    public Node_queue(int index, int distance) {
         this.index = index;
         this.distance = distance;
     }
@@ -29,7 +29,7 @@ public class SP_EX9_1 {
     public static int n, m, start;
 
     // 각 노드에 연결되어 있는 노드에 대한 정보를 담는 배열
-    public static ArrayList<ArrayList<Node>> graph = new ArrayList<ArrayList<Node>>();
+    public static ArrayList<ArrayList<Node_queue>> graph = new ArrayList<ArrayList<Node_queue>>();
 
     // 노드를 방문한 적이 있는지 확인할 수 있는 배열
     // 노드 최대 개수는 100000개이다.
@@ -96,7 +96,7 @@ public class SP_EX9_1 {
 
         // 그래프 초기화
         for (int i = 0; i <= n; i++) {
-            graph.add(new ArrayList<Node>());
+            graph.add(new ArrayList<Node_queue>());
         }
 
         // 모든 간선 정보를 입력받기
@@ -105,7 +105,7 @@ public class SP_EX9_1 {
             int b = sc.nextInt();
             int c = sc.nextInt();
             // a번 노드에서 b번 노드로 가는 비용이 c라는 의미
-            graph.get(a).add(new Node(b, c));
+            graph.get(a).add(new Node_queue(b, c));
         }
 
         // 최단 거리 테이블을 모두 무한으로 초기화
