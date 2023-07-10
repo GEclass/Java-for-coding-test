@@ -47,7 +47,7 @@ public class Test2 {
 
 	public static ArrayList<ArrayList<Node2>> graph = new ArrayList<ArrayList<Node2>>();
 
-	public static int[] d = new int[100001];
+	public static int[] d = new int[11];
 
 	public static void dijkstra(int start) {
 		// 우선순위 큐 : 방문하지 않은 노드 중에서, 가장 최단 거리가 짧은 노드의 번호를 반환
