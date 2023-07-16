@@ -52,6 +52,9 @@ public class SP_EX9_1 {
                 min_value = d[i];
                 index = i;
             }
+            // graph.get(1).add(new Node(2, 2)); -> 1번 노드에서 2번 노드로 가는 비용이 2 -> d[2] = 2
+            // graph.get(1).add(new Node(3, 5)); -> 1번 노드에서 3번 노드로 가는 비용이 3 -> d[3] = 5
+            // graph.get(1).add(new Node(4, 1)); -> 1번 노드에서 4번 노드로 가는 비용이 5 -> d[4] = 1
         }
         return index;
     }
@@ -66,9 +69,24 @@ public class SP_EX9_1 {
 
         // 시작 노드에서의 노드 정보를 d 배열에 저장하기
         // 시작 노드에서 각 노드까지의 최단 경로를 저장하는 배열에 시작 노드에서 갈 수 있는 모든 노드의 비용을 저장한다.
-        for (int j = 0; j < graph.get(start).size(); j++) {
+        for (int j = 0; j < graph.get(start).size(); j++) { // 노드 정보에 대해 저장된 Arraylist 11개 -> 11번 반복
             // get().get()인 이유는 graph의 구조가 ArrayList<ArrayList<Node>>로 되어 있기 때문이다.
+            // graph.get(a).add(new Node(b, c)); -> a번 노드에서 b번 노드로 가는 비용이 c
             d[graph.get(start).get(j).getIndex()] = graph.get(start).get(j).getDistance();
+            // graph.get(1).add(new Node(2, 2)); -> 1번 노드에서 2번 노드로 가는 비용이 2 -> d[2] = 2
+            // graph.get(1).add(new Node(3, 5)); -> 1번 노드에서 3번 노드로 가는 비용이 3 -> d[3] = 5
+            // graph.get(1).add(new Node(4, 1)); -> 1번 노드에서 4번 노드로 가는 비용이 5 -> d[4] = 1
+            // graph.get(2).add(new Node(3, 3)); -> 2번 노드에서 3번 노드로 가는 비용이 3
+            // graph.get(2).add(new Node(4, 2)); -> 2번 노드에서 4번 노드로 가는 비용이 2
+            // graph.get(3).add(new Node(2, 3)); -> 3번 노드에서 2번 노드로 가는 비용이 3
+            // graph.get(3).add(new Node(6, 5)); -> 3번 노드에서 6번 노드로 가는 비용이 5
+            // graph.get(4).add(new Node(3, 3)); -> 4번 노드에서 3번 노드로 가는 비용이 3
+            // graph.get(4).add(new Node(5, 1)); -> 4번 노드에서 5번 노드로 가는 비용이 1
+            // graph.get(5).add(new Node(3, 1)); -> 5번 노드에서 3번 노드로 가는 비용이 1
+            // graph.get(5).add(new Node(6, 2)); -> 5번 노드에서 6번 노드로 가는 비용이 2
+
+            // -> 시작 노드와 이어져 있는 노드들만 배열에 저장한다.
+
         }
 
         // 시작 노드를 제외한 전체 n - 1개의 노드에 대해 반복

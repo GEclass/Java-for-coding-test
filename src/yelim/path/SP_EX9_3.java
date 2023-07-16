@@ -9,7 +9,7 @@ public class SP_EX9_3 {
     // 노드의 개수는 최대 500개라고 가정
     public static int n, m;
     // 2차원 배열(그래프 표현)를 만들기
-    public static int[][] graph = new int[501][501];
+    public static int[][] graph = new int[11][11];
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -18,7 +18,7 @@ public class SP_EX9_3 {
         m = sc.nextInt();
 
         // 최단 거리 테이블을 모두 무한으로 초기화
-        for (int i = 0; i < 501; i++) {
+        for (int i = 0; i < 11; i++) {
             Arrays.fill(graph[i], INF);
         }
 
@@ -43,6 +43,7 @@ public class SP_EX9_3 {
             for (int a = 1; a <= n; a++) {
                 for (int b = 1; b <= n; b++) {
                     // a에서 b로 가는 비용, a에서 k로 가는 비용 + k에서 b로 가는 비용 중 최소 경소 저장
+                    // 최단 경로에 대해 플로이드 워셜은 다이나믹 프로그래밍을 사용하여 구한다.
                     graph[a][b] = Math.min(graph[a][b], graph[a][k] + graph[k][b]);
                 }
             }
