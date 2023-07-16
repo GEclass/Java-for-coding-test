@@ -1,7 +1,7 @@
 package yelim.path;
 
 import java.util.*;
-s
+
 class Node implements Comparable<Node> {
     private int index;
     private int distance;
