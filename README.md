@@ -7,4 +7,4 @@
 
 ## ✏️
 - **Textbook : 1 Day, 0.5 Chpater**
-- **Platform : 1 Day, 2 Problem**
+- **Platform : 1 Day, 4 Problem**

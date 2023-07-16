@@ -40,7 +40,7 @@ public class Test1 {
 	public static int n, m, start;
 
 	// 각 노드에 연결되어 있는 노드에 대한 정보를 담는 배열
-	public static ArrayList<ArrayList<Node>> graph = new ArrayList<ArrayList<Node>>();
+	public static ArrayList<ArrayList<Node3>> graph = new ArrayList<ArrayList<Node3>>();
 
 	// 방문한 적이 있는지 체크하는 목적의 배열
 	public static boolean[] visited = new boolean[100001];
@@ -133,7 +133,7 @@ public class Test1 {
 		// 그래프 초기화
 		// = 그래프의 토대를 그리는 과정
 		for (int i = 0; i < m; i ++) {
-			graph.add(new ArrayList<Node>());
+			graph.add(new ArrayList<Node3>());
 		}
 
 		// 모든 간선 정보를 입력받기
@@ -147,7 +147,7 @@ public class Test1 {
 			// graph.get(1).add(new Node(2,2))
 			// 1번 노드에서 2번 노드로 가는 비용 2
 			// 즉, 1번 노드와 2번 노드의 거리 2
-			graph.get(a).add(new Node(b, c));
+			graph.get(a).add(new Node3(b, c));
 		}
 
 		// 최단 거리 테이블을 모두 무한으로 초기화
